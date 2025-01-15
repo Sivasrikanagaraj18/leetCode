@@ -13,9 +13,16 @@ class Solution {
             j--;
             continue;
         }
-        if(Character.toLowerCase(c1)!=Character.toLowerCase(c2)){
-            return false;
-        }
+        if(c1>='A' && c1 <='Z'){
+                c1 += 32;
+            }
+        if(c2>='A' && c2 <='Z'){
+                c2 += 32;
+            }
+        if(c1 != c2){
+                return false;
+            }
+
         i++;
         j--;
     }
