@@ -6,10 +6,7 @@ class Solution {
             if(nums[i]<0){
                 neg++;
             }
-            else if(nums[i]==0){
-                continue;
-            }
-            else{
+            if(nums[i]>0){
                 pos++;
             }
              max=Math.max(pos,neg);
