@@ -7,9 +7,8 @@ class Solution {
                 id++;
             }
         }
-        while(id<nums.length) {
-            nums[id]=0;
-            id++;
+        for(int i=id;i<nums.length;i++){
+            nums[id++]=0;
         }
     }
 }
