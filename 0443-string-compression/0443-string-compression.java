@@ -4,22 +4,22 @@ class Solution {
      int id=0;
      for(int i=0;i<n;i++){
         char ch=chars[i];
-        int count=0;
+        int c=0;
         while(i<n && chars[i]==ch){
-            count++;
+            c++;
             i++;
         }
-        if(count==1){
+        if(c==1){
             chars[id++]=ch;
         }
         else{
             chars[id++]=ch;
-            for(char digit:Integer.toString(count).toCharArray()){
-                chars[id++]=digit;
+            for(char digit:Integer.toString(c).toCharArray()){
+              chars[id++]=digit;
             }
         }
         i--;
      }
      return id;
-    }
+}
 }
