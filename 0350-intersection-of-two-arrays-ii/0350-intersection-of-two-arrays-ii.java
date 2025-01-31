@@ -3,17 +3,20 @@ class Solution {
       int i=0,j=0,k=0;
       Arrays.sort(nums1);
       Arrays.sort(nums2);
+      int[] res=new int[Math.min(nums1.length,nums2.length)];
       while(i<nums1.length&&j<nums2.length){
-        if(nums1[i]<nums2[j]){
-            i++;
-        }
-        else if(nums1[i]>nums2[j]){
-            j++;
-        }
-        else{
-            nums1[k++]=nums1[i++];
-        }
+       if(nums1[i]<nums2[j]){
+        i++;
+       }
+       else if(nums1[i]>nums2[j]){
+        j++;
+       }
+       else{
+        res[k++]=nums1[i];
+        i++;
+        j++;
+       }
       }
-      return Arrays.copyOfRange(nums1,0,k);
+      return Arrays.copyOfRange(res,0,k);
     }
 }
